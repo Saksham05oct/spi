@@ -1,0 +1,15 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-sv
+-uvm
+rtl/spi.sv
+test/test_spi.sv
+-top
+tb_top
++UVM_TESTNAME=spi_test
+-access
++rwc
+-l
+simulation.log

@@ -1,0 +1,3 @@
+s1(06Jul2026:14:43:20):  /cadence/XCELIUM2003/tools/bin/64bit/xrun -sv rtl/spi.sv +UVM_TESTNAME=spi_test -access +rwc 
+s2(06Jul2026:14:47:13):  /cadence/XCELIUM2003/tools/bin/64bit/xrun -sv -uvm rtl/spi.sv test/test_spi.sv -top tb_top +UVM_TESTNAME=spi_test -access +rwc 
+s3(06Jul2026:14:49:22):  /cadence/XCELIUM2003/tools/bin/64bit/xrun -sv -uvm rtl/spi.sv test/test_spi.sv -top tb_top +UVM_TESTNAME=spi_test -access +rwc -l simulation.log 

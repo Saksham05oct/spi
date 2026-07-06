@@ -1,0 +1,31 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INPUT
+"@source /cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl"
+-uvmhome
+/cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.1d
+-sv_lib
+/cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so
++UVM_TESTNAME=spi_test
+-MESSAGES
+-RUN
+-SV_LIB
+/cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmdpi.so
++EMGRLOG
+simulation.log
+-XLSTIME
+1783329562
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.20.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.20.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.03.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	20.03-s007"

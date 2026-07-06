@@ -1,0 +1,22 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-loadpli
+/cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so:uvm_pli_boot
++UVM_TESTNAME=spi_test
+-ACCESS
++rwc
+-MESSAGES
+tb_top
+-XLMODE
+./xcelium.d/run.lnx8664.20.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.20.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.03.d/hdl.var
+-WORK
+worklib
+-IRUNHASTOP
+-HASXLMODE
