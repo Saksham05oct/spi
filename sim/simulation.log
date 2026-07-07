@@ -1,0 +1,536 @@
+xrun(64): 20.03-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.03-s007: Started on Jul 07, 2026 at 19:58:12 IST
+/cadence/XCELIUM2003/tools/bin/64bit/xrun
+	-sv
+	-uvm
+	-uvmhome CDNS-1.2
+	rtl/spi.sv
+	test/test_spi.sv
+	+UVM_TESTNAME=test
+	-access +rwc
+	-l simulation.log
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.2
+file: test/test_spi.sv
+	module worklib.tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		$unit_0x7716f0ec
+		tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.spi_mem:sv <0x59071378>
+			streams:  15, words:  8285
+		worklib.spi_intf:sv <0x58c8aed7>
+			streams:  12, words:  7658
+		worklib.uvm_pkg:sv <0x0061f45a>
+			streams:   6, words:  3460
+		worklib.uvm_pkg:sv <0x4b498850>
+			streams:   6, words:  3120
+		worklib.uvm_pkg:sv <0x71f30dd7>
+			streams:   5, words:  2530
+		worklib.uvm_pkg:sv <0x54f3f95c>
+			streams:  25, words: 18508
+		worklib.uvm_pkg:sv <0x67102660>
+			streams:   7, words:  1927
+		worklib.uvm_pkg:sv <0x110e4a8f>
+			streams:  21, words: 50403
+		worklib.uvm_pkg:sv <0x43f01dda>
+			streams:   7, words:  1927
+		worklib.uvm_pkg:sv <0x5b8f86ce>
+			streams:  24, words: 21079
+		worklib.uvm_pkg:sv <0x0b450167>
+			streams:  24, words: 20249
+		worklib.uvm_pkg:sv <0x77ecb068>
+			streams:  20, words: 19985
+		worklib.uvm_pkg:sv <0x64eec68c>
+			streams:  11, words:  4462
+		worklib.uvm_pkg:sv <0x744c19ea>
+			streams:  23, words: 31087
+		worklib.uvm_pkg:sv <0x281c7283>
+			streams:   7, words:  2431
+		worklib.uvm_pkg:sv <0x092b6d13>
+			streams:  12, words: 16547
+		worklib.uvm_pkg:sv <0x59d25269>
+			streams:  23, words: 25403
+		worklib.uvm_pkg:sv <0x2b6ee186>
+			streams:  22, words: 50423
+		worklib.uvm_pkg:sv <0x4e1bad38>
+			streams:  25, words: 34101
+		worklib.uvm_pkg:sv <0x76382e93>
+			streams:  24, words: 47944
+		worklib.uvm_pkg:sv <0x07356e69>
+			streams:  25, words: 36714
+		worklib.uvm_pkg:sv <0x7fb525e5>
+			streams:  23, words: 53964
+		worklib.uvm_pkg:sv <0x16d195e0>
+			streams:  25, words: 38817
+		worklib.uvm_pkg:sv <0x6c6ffba5>
+			streams:  23, words: 58950
+		worklib.uvm_pkg:sv <0x7a85dd2a>
+			streams:  25, words: 43566
+		worklib.uvm_pkg:sv <0x0020a9d7>
+			streams:  23, words: 51868
+		worklib.uvm_pkg:sv <0x2e15fcc9>
+			streams:  23, words: 55396
+		worklib.uvm_pkg:sv <0x51c61df9>
+			streams:  25, words: 36193
+		worklib.uvm_pkg:sv <0x1becc71d>
+			streams:  23, words: 51939
+		worklib.uvm_pkg:sv <0x318368d6>
+			streams:  25, words: 77092
+		worklib.uvm_pkg:sv <0x637230f5>
+			streams:  54, words: 78852
+		worklib.cdns_uvm_pkg:sv <0x158d756f>
+			streams:   9, words:  4566
+		worklib.cdns_uvm_pkg:sv <0x495915f6>
+			streams:  10, words:  8695
+		worklib.uvm_pkg:sv <0x18458e6a>
+			streams:  21, words: 28621
+		worklib.uvm_pkg:sv <0x63a6b2f4>
+			streams:   7, words:  3099
+		worklib.uvm_pkg:sv <0x46d46e7c>
+			streams:  22, words: 21289
+		worklib.uvm_pkg:sv <0x0cc1b286>
+			streams:  65, words: 69411
+		worklib.uvm_pkg:sv <0x625eab6a>
+			streams:  17, words: 16162
+		worklib.uvm_pkg:sv <0x3fe5430c>
+			streams:  22, words: 22739
+		worklib.uvm_pkg:sv <0x07f9d8b2>
+			streams:  22, words: 40769
+		worklib.uvm_pkg:sv <0x24a88f52>
+			streams:   7, words:  3099
+		worklib.uvm_pkg:sv <0x09d7559a>
+			streams: 116, words: 159927
+		worklib.uvm_pkg:sv <0x2ee406a6>
+			streams:  29, words: 33322
+		worklib.uvm_pkg:sv <0x4caa4927>
+			streams:   7, words:  3099
+		worklib.uvm_pkg:sv <0x6f78fd99>
+			streams:  23, words: 27253
+		worklib.uvm_pkg:sv <0x14bf7e04>
+			streams:  23, words: 27256
+		worklib.uvm_pkg:sv <0x65a081ee>
+			streams:  23, words: 27256
+		worklib.uvm_pkg:sv <0x59787889>
+			streams:  23, words: 27253
+		worklib.uvm_pkg:sv <0x6bf38d57>
+			streams: 177, words: 200446
+		worklib.uvm_pkg:sv <0x618935cc>
+			streams:  31, words: 90406
+		worklib.tb:sv <0x6d3051b0>
+			streams:  68, words: 87757
+		worklib.\$unit_0x7716f0ec :compilation_unit <0x0a9a374e>
+			streams:   0, words:     0
+		worklib.cdns_uvm_pkg:sv <0x26639e3d>
+			streams: 218, words: 388052
+		worklib.cdns_uvmapi:svp <0x3495899c>
+			streams:  27, words: 31643
+		worklib.cdns_assert2uvm_pkg:sv <0x36f99c80>
+			streams:   3, words:  2248
+		worklib.uvm_pkg:sv <0x5a774b48>
+			streams: 4667, words: 7695980
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       4       4
+		Interfaces:                    1       1
+		Verilog packages:              4       4
+		Registers:                 16584   11753
+		Scalar wires:                 12       -
+		Vectored wires:                4       -
+		Named events:                  4      12
+		Always blocks:                 3       3
+		Initial blocks:              345     175
+		Parallel blocks:              27      28
+		Cont. assignments:             0       1
+		Pseudo assignments:            8       8
+		Assertions:                    3       3
+		Compilation units:             1       1
+		SV Class declarations:       236     352
+		SV Class specializations:    450     450
+		Simulation timescale:        1ps
+	Writing initial simulation snapshot: worklib.tb:sv
+Loading snapshot worklib.tb:sv .................... Done
+xmsim: *W,XCLGNOPTM: The SystemVerilog constraint solver Xceligen options 'seed_only_rand and process_alternate_rng and ignore_worklib_name' are now enabled by default..
+SVSEED default: 1
+xmsim: *W,RNDNOXCEL: A newer version of the SystemVerilog constraint solver is available. It is recommended to enable it using "xrun/xmsim -xceligen on=1903 ..." .
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /cadence/XCELIUM2003/tools/xcelium/files/xmsimrc
+xcelium> source /cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.2/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+UVM_INFO /cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(412) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+CDNS-UVM-1.2 (20.03-s007)
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test test...
+xmsim: *W,PRPASZ: Packed array at "worklib.uvm_pkg::uvm_string_to_bits.uvm_string_to_bits" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.uvm_pkg::uvm_string_to_bits.uvm_string_to_bits' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.uvm_pkg::uvm_bits_to_string.str" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.uvm_pkg::uvm_bits_to_string.str' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::_temp" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::_temp' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::_temp2" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::_temp2' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+UVM_INFO test/test_spi.sv(404) @ 0: uvm_test_top [TEST] --- STARTING RESET SEQUENCE ---
+SDI/Verilog Transaction Recording Facility Version 20.03-s007
+UVM_INFO test/test_spi.sv(179) @ 0: uvm_test_top.env.a.d [DRV] System Reset : Start of Simulation
+UVM_INFO test/test_spi.sv(249) @ 10000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 10000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(179) @ 10000: uvm_test_top.env.a.d [DRV] System Reset : Start of Simulation
+UVM_INFO test/test_spi.sv(179) @ 30000: uvm_test_top.env.a.d [DRV] System Reset : Start of Simulation
+UVM_INFO test/test_spi.sv(179) @ 50000: uvm_test_top.env.a.d [DRV] System Reset : Start of Simulation
+UVM_INFO test/test_spi.sv(179) @ 70000: uvm_test_top.env.a.d [DRV] System Reset : Start of Simulation
+UVM_INFO test/test_spi.sv(249) @ 110000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 110000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 130000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 130000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 150000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 150000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 170000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 170000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 190000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 190000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 210000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 210000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 230000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 230000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 250000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 250000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 270000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 270000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 290000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 290000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 310000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 310000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 330000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 330000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 350000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 350000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 370000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 370000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(249) @ 390000: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+UVM_INFO test/test_spi.sv(297) @ 390000: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(407) @ 390000: uvm_test_top [TEST] --- STARTING WRITE DATA SEQUENCE ---
+UVM_INFO test/test_spi.sv(201) @ 410000: uvm_test_top.env.a.d [DRV] mode : Write addr:10 din:153
+UVM_INFO test/test_spi.sv(261) @ 870000: uvm_test_top.env.a.m [MON] DATA WRITE addr:10 data:153 err:0
+UVM_INFO test/test_spi.sv(305) @ 870000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:10, wdata:153 arr_wr:153
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 890000: uvm_test_top.env.a.d [DRV] mode : Write addr:4 din:73
+UVM_INFO test/test_spi.sv(261) @ 1330000: uvm_test_top.env.a.m [MON] DATA WRITE addr:4 data:73 err:0
+UVM_INFO test/test_spi.sv(305) @ 1330000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:4, wdata:73 arr_wr:73
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 1350000: uvm_test_top.env.a.d [DRV] mode : Write addr:25 din:169
+UVM_INFO test/test_spi.sv(261) @ 1790000: uvm_test_top.env.a.m [MON] DATA WRITE addr:25 data:169 err:0
+UVM_INFO test/test_spi.sv(305) @ 1790000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:25, wdata:169 arr_wr:169
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 1810000: uvm_test_top.env.a.d [DRV] mode : Write addr:8 din:185
+UVM_INFO test/test_spi.sv(261) @ 2250000: uvm_test_top.env.a.m [MON] DATA WRITE addr:8 data:185 err:0
+UVM_INFO test/test_spi.sv(305) @ 2250000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:8, wdata:185 arr_wr:185
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 2270000: uvm_test_top.env.a.d [DRV] mode : Write addr:17 din:121
+UVM_INFO test/test_spi.sv(261) @ 2710000: uvm_test_top.env.a.m [MON] DATA WRITE addr:17 data:121 err:0
+UVM_INFO test/test_spi.sv(305) @ 2710000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:17, wdata:121 arr_wr:121
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 2730000: uvm_test_top.env.a.d [DRV] mode : Write addr:21 din:234
+UVM_INFO test/test_spi.sv(261) @ 3170000: uvm_test_top.env.a.m [MON] DATA WRITE addr:21 data:234 err:0
+UVM_INFO test/test_spi.sv(305) @ 3170000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:21, wdata:234 arr_wr:234
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 3190000: uvm_test_top.env.a.d [DRV] mode : Write addr:19 din:10
+UVM_INFO test/test_spi.sv(261) @ 3630000: uvm_test_top.env.a.m [MON] DATA WRITE addr:19 data:10 err:0
+UVM_INFO test/test_spi.sv(305) @ 3630000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:19, wdata:10 arr_wr:10
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 3650000: uvm_test_top.env.a.d [DRV] mode : Write addr:11 din:219
+UVM_INFO test/test_spi.sv(261) @ 4090000: uvm_test_top.env.a.m [MON] DATA WRITE addr:11 data:219 err:0
+UVM_INFO test/test_spi.sv(305) @ 4090000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:11, wdata:219 arr_wr:219
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 4110000: uvm_test_top.env.a.d [DRV] mode : Write addr:30 din:91
+UVM_INFO test/test_spi.sv(261) @ 4550000: uvm_test_top.env.a.m [MON] DATA WRITE addr:30 data:91 err:0
+UVM_INFO test/test_spi.sv(305) @ 4550000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:30, wdata:91 arr_wr:91
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 4570000: uvm_test_top.env.a.d [DRV] mode : Write addr:11 din:140
+UVM_INFO test/test_spi.sv(261) @ 5010000: uvm_test_top.env.a.m [MON] DATA WRITE addr:11 data:140 err:0
+UVM_INFO test/test_spi.sv(305) @ 5010000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:11, wdata:140 arr_wr:140
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 5030000: uvm_test_top.env.a.d [DRV] mode : Write addr:18 din:108
+UVM_INFO test/test_spi.sv(261) @ 5470000: uvm_test_top.env.a.m [MON] DATA WRITE addr:18 data:108 err:0
+UVM_INFO test/test_spi.sv(305) @ 5470000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:18, wdata:108 arr_wr:108
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 5490000: uvm_test_top.env.a.d [DRV] mode : Write addr:20 din:253
+UVM_INFO test/test_spi.sv(261) @ 5930000: uvm_test_top.env.a.m [MON] DATA WRITE addr:20 data:253 err:0
+UVM_INFO test/test_spi.sv(305) @ 5930000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:20, wdata:253 arr_wr:253
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 5950000: uvm_test_top.env.a.d [DRV] mode : Write addr:16 din:62
+UVM_INFO test/test_spi.sv(261) @ 6390000: uvm_test_top.env.a.m [MON] DATA WRITE addr:16 data:62 err:0
+UVM_INFO test/test_spi.sv(305) @ 6390000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:16, wdata:62 arr_wr:62
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 6410000: uvm_test_top.env.a.d [DRV] mode : Write addr:6 din:47
+UVM_INFO test/test_spi.sv(261) @ 6850000: uvm_test_top.env.a.m [MON] DATA WRITE addr:6 data:47 err:0
+UVM_INFO test/test_spi.sv(305) @ 6850000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:6, wdata:47 arr_wr:47
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 6870000: uvm_test_top.env.a.d [DRV] mode : Write addr:23 din:208
+UVM_INFO test/test_spi.sv(261) @ 7310000: uvm_test_top.env.a.m [MON] DATA WRITE addr:23 data:208 err:0
+UVM_INFO test/test_spi.sv(305) @ 7310000: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:23, wdata:208 arr_wr:208
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(410) @ 7310000: uvm_test_top [TEST] --- STARTING READ DATA SEQUENCE ---
+UVM_INFO test/test_spi.sv(211) @ 7330000: uvm_test_top.env.a.d [DRV] mode : Read addr:26 din:141
+UVM_INFO test/test_spi.sv(271) @ 7790000: uvm_test_top.env.a.m [MON] DATA READ addr:26 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 7790000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:26, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 7810000: uvm_test_top.env.a.d [DRV] mode : Read addr:20 din:61
+UVM_INFO test/test_spi.sv(271) @ 8270000: uvm_test_top.env.a.m [MON] DATA READ addr:20 data:253 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 8270000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:20, rdata:253
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 8290000: uvm_test_top.env.a.d [DRV] mode : Read addr:9 din:157
+UVM_INFO test/test_spi.sv(271) @ 8750000: uvm_test_top.env.a.m [MON] DATA READ addr:9 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 8750000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:9, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 8770000: uvm_test_top.env.a.d [DRV] mode : Read addr:24 din:174
+UVM_INFO test/test_spi.sv(271) @ 9230000: uvm_test_top.env.a.m [MON] DATA READ addr:24 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 9230000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:24, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 9250000: uvm_test_top.env.a.d [DRV] mode : Read addr:1 din:110
+UVM_INFO test/test_spi.sv(271) @ 9710000: uvm_test_top.env.a.m [MON] DATA READ addr:1 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 9710000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:1, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 9730000: uvm_test_top.env.a.d [DRV] mode : Read addr:5 din:222
+UVM_INFO test/test_spi.sv(271) @ 10190000: uvm_test_top.env.a.m [MON] DATA READ addr:5 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 10190000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:5, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 10210000: uvm_test_top.env.a.d [DRV] mode : Read addr:3 din:255
+UVM_INFO test/test_spi.sv(271) @ 10670000: uvm_test_top.env.a.m [MON] DATA READ addr:3 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 10670000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:3, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 10690000: uvm_test_top.env.a.d [DRV] mode : Read addr:27 din:207
+UVM_INFO test/test_spi.sv(271) @ 11150000: uvm_test_top.env.a.m [MON] DATA READ addr:27 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 11150000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:27, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 11170000: uvm_test_top.env.a.d [DRV] mode : Read addr:14 din:80
+UVM_INFO test/test_spi.sv(271) @ 11630000: uvm_test_top.env.a.m [MON] DATA READ addr:14 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 11630000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:14, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 11650000: uvm_test_top.env.a.d [DRV] mode : Read addr:27 din:128
+UVM_INFO test/test_spi.sv(271) @ 12110000: uvm_test_top.env.a.m [MON] DATA READ addr:27 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 12110000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:27, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 12130000: uvm_test_top.env.a.d [DRV] mode : Read addr:2 din:97
+UVM_INFO test/test_spi.sv(271) @ 12590000: uvm_test_top.env.a.m [MON] DATA READ addr:2 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 12590000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:2, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 12610000: uvm_test_top.env.a.d [DRV] mode : Read addr:4 din:242
+UVM_INFO test/test_spi.sv(271) @ 13070000: uvm_test_top.env.a.m [MON] DATA READ addr:4 data:73 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 13070000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:4, rdata:73
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 13090000: uvm_test_top.env.a.d [DRV] mode : Read addr:0 din:51
+UVM_INFO test/test_spi.sv(271) @ 13550000: uvm_test_top.env.a.m [MON] DATA READ addr:0 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 13550000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:0, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 13570000: uvm_test_top.env.a.d [DRV] mode : Read addr:22 din:35
+UVM_INFO test/test_spi.sv(271) @ 14030000: uvm_test_top.env.a.m [MON] DATA READ addr:22 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 14030000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:22, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 14050000: uvm_test_top.env.a.d [DRV] mode : Read addr:7 din:196
+UVM_INFO test/test_spi.sv(271) @ 14510000: uvm_test_top.env.a.m [MON] DATA READ addr:7 data:0 slverr:0
+UVM_INFO test/test_spi.sv(315) @ 14510000: uvm_test_top.env.s [SCO] DATA MATCHED : addr:7, rdata:0
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(413) @ 14510000: uvm_test_top [TEST] --- STARTING WRITE ERROR SEQUENCE ---
+UVM_INFO test/test_spi.sv(201) @ 14530000: uvm_test_top.env.a.d [DRV] mode : Write addr:243 din:97
+UVM_INFO test/test_spi.sv(261) @ 14590000: uvm_test_top.env.a.m [MON] DATA WRITE addr:243 data:97 err:1
+UVM_INFO test/test_spi.sv(301) @ 14590000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 14610000: uvm_test_top.env.a.d [DRV] mode : Write addr:45 din:17
+UVM_INFO test/test_spi.sv(261) @ 14670000: uvm_test_top.env.a.m [MON] DATA WRITE addr:45 data:17 err:1
+UVM_INFO test/test_spi.sv(301) @ 14670000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 14690000: uvm_test_top.env.a.d [DRV] mode : Write addr:66 din:113
+UVM_INFO test/test_spi.sv(261) @ 14750000: uvm_test_top.env.a.m [MON] DATA WRITE addr:66 data:113 err:1
+UVM_INFO test/test_spi.sv(301) @ 14750000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 14770000: uvm_test_top.env.a.d [DRV] mode : Write addr:113 din:129
+UVM_INFO test/test_spi.sv(261) @ 14830000: uvm_test_top.env.a.m [MON] DATA WRITE addr:113 data:129 err:1
+UVM_INFO test/test_spi.sv(301) @ 14830000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 14850000: uvm_test_top.env.a.d [DRV] mode : Write addr:154 din:66
+UVM_INFO test/test_spi.sv(261) @ 14910000: uvm_test_top.env.a.m [MON] DATA WRITE addr:154 data:66 err:1
+UVM_INFO test/test_spi.sv(301) @ 14910000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 14930000: uvm_test_top.env.a.d [DRV] mode : Write addr:222 din:178
+UVM_INFO test/test_spi.sv(261) @ 14990000: uvm_test_top.env.a.m [MON] DATA WRITE addr:222 data:178 err:1
+UVM_INFO test/test_spi.sv(301) @ 14990000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15010000: uvm_test_top.env.a.d [DRV] mode : Write addr:60 din:210
+UVM_INFO test/test_spi.sv(261) @ 15070000: uvm_test_top.env.a.m [MON] DATA WRITE addr:60 data:210 err:1
+UVM_INFO test/test_spi.sv(301) @ 15070000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15090000: uvm_test_top.env.a.d [DRV] mode : Write addr:148 din:163
+UVM_INFO test/test_spi.sv(261) @ 15150000: uvm_test_top.env.a.m [MON] DATA WRITE addr:148 data:163 err:1
+UVM_INFO test/test_spi.sv(301) @ 15150000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15170000: uvm_test_top.env.a.d [DRV] mode : Write addr:39 din:35
+UVM_INFO test/test_spi.sv(261) @ 15230000: uvm_test_top.env.a.m [MON] DATA WRITE addr:39 data:35 err:1
+UVM_INFO test/test_spi.sv(301) @ 15230000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15250000: uvm_test_top.env.a.d [DRV] mode : Write addr:148 din:84
+UVM_INFO test/test_spi.sv(261) @ 15310000: uvm_test_top.env.a.m [MON] DATA WRITE addr:148 data:84 err:1
+UVM_INFO test/test_spi.sv(301) @ 15310000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15330000: uvm_test_top.env.a.d [DRV] mode : Write addr:59 din:53
+UVM_INFO test/test_spi.sv(261) @ 15390000: uvm_test_top.env.a.m [MON] DATA WRITE addr:59 data:53 err:1
+UVM_INFO test/test_spi.sv(301) @ 15390000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15410000: uvm_test_top.env.a.d [DRV] mode : Write addr:221 din:197
+UVM_INFO test/test_spi.sv(261) @ 15470000: uvm_test_top.env.a.m [MON] DATA WRITE addr:221 data:197 err:1
+UVM_INFO test/test_spi.sv(301) @ 15470000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15490000: uvm_test_top.env.a.d [DRV] mode : Write addr:153 din:6
+UVM_INFO test/test_spi.sv(261) @ 15550000: uvm_test_top.env.a.m [MON] DATA WRITE addr:153 data:6 err:1
+UVM_INFO test/test_spi.sv(301) @ 15550000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15570000: uvm_test_top.env.a.d [DRV] mode : Write addr:112 din:247
+UVM_INFO test/test_spi.sv(261) @ 15630000: uvm_test_top.env.a.m [MON] DATA WRITE addr:112 data:247 err:1
+UVM_INFO test/test_spi.sv(301) @ 15630000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(201) @ 15650000: uvm_test_top.env.a.d [DRV] mode : Write addr:64 din:152
+UVM_INFO test/test_spi.sv(261) @ 15710000: uvm_test_top.env.a.m [MON] DATA WRITE addr:64 data:152 err:1
+UVM_INFO test/test_spi.sv(301) @ 15710000: uvm_test_top.env.s [SCO] SLV ERROR during WRITE OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(416) @ 15710000: uvm_test_top [TEST] --- STARTING READ ERROR SEQUENCE ---
+UVM_INFO test/test_spi.sv(211) @ 15730000: uvm_test_top.env.a.d [DRV] mode : Read addr:161 din:139
+UVM_INFO test/test_spi.sv(271) @ 15790000: uvm_test_top.env.a.m [MON] DATA READ addr:161 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 15790000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 15810000: uvm_test_top.env.a.d [DRV] mode : Read addr:187 din:59
+UVM_INFO test/test_spi.sv(271) @ 15870000: uvm_test_top.env.a.m [MON] DATA READ addr:187 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 15870000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 15890000: uvm_test_top.env.a.d [DRV] mode : Read addr:208 din:155
+UVM_INFO test/test_spi.sv(271) @ 15950000: uvm_test_top.env.a.m [MON] DATA READ addr:208 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 15950000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 15970000: uvm_test_top.env.a.d [DRV] mode : Read addr:255 din:172
+UVM_INFO test/test_spi.sv(271) @ 16030000: uvm_test_top.env.a.m [MON] DATA READ addr:255 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16030000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16050000: uvm_test_top.env.a.d [DRV] mode : Read addr:72 din:108
+UVM_INFO test/test_spi.sv(271) @ 16110000: uvm_test_top.env.a.m [MON] DATA READ addr:72 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16110000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16130000: uvm_test_top.env.a.d [DRV] mode : Read addr:140 din:220
+UVM_INFO test/test_spi.sv(271) @ 16190000: uvm_test_top.env.a.m [MON] DATA READ addr:140 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16190000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16210000: uvm_test_top.env.a.d [DRV] mode : Read addr:234 din:253
+UVM_INFO test/test_spi.sv(271) @ 16270000: uvm_test_top.env.a.m [MON] DATA READ addr:234 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16270000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16290000: uvm_test_top.env.a.d [DRV] mode : Read addr:98 din:205
+UVM_INFO test/test_spi.sv(271) @ 16350000: uvm_test_top.env.a.m [MON] DATA READ addr:98 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16350000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16370000: uvm_test_top.env.a.d [DRV] mode : Read addr:213 din:78
+UVM_INFO test/test_spi.sv(271) @ 16430000: uvm_test_top.env.a.m [MON] DATA READ addr:213 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16430000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16450000: uvm_test_top.env.a.d [DRV] mode : Read addr:98 din:126
+UVM_INFO test/test_spi.sv(271) @ 16510000: uvm_test_top.env.a.m [MON] DATA READ addr:98 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16510000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16530000: uvm_test_top.env.a.d [DRV] mode : Read addr:233 din:95
+UVM_INFO test/test_spi.sv(271) @ 16590000: uvm_test_top.env.a.m [MON] DATA READ addr:233 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16590000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16610000: uvm_test_top.env.a.d [DRV] mode : Read addr:139 din:240
+UVM_INFO test/test_spi.sv(271) @ 16670000: uvm_test_top.env.a.m [MON] DATA READ addr:139 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16670000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16690000: uvm_test_top.env.a.d [DRV] mode : Read addr:71 din:48
+UVM_INFO test/test_spi.sv(271) @ 16750000: uvm_test_top.env.a.m [MON] DATA READ addr:71 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16750000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16770000: uvm_test_top.env.a.d [DRV] mode : Read addr:253 din:33
+UVM_INFO test/test_spi.sv(271) @ 16830000: uvm_test_top.env.a.m [MON] DATA READ addr:253 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16830000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(211) @ 16850000: uvm_test_top.env.a.d [DRV] mode : Read addr:206 din:194
+UVM_INFO test/test_spi.sv(271) @ 16910000: uvm_test_top.env.a.m [MON] DATA READ addr:206 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16910000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO test/test_spi.sv(271) @ 16990000: uvm_test_top.env.a.m [MON] DATA READ addr:206 data:0 slverr:1
+UVM_INFO test/test_spi.sv(310) @ 16990000: uvm_test_top.env.s [SCO] SLV ERROR during READ OP
+----------------------------------------------------------------
+UVM_INFO /cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_objection.svh(1271) @ 17010000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_catcher.svh(705) @ 17010000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_server.svh(847) @ 17010000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  228
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[DRV]    65
+[MON]    77
+[RNTST]     1
+[SCO]    77
+[TEST]     5
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+
+Simulation complete via $finish(1) at time 17010 NS + 59
+/cadence/XCELIUM2003/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh:543     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.03-s007: Exiting on Jul 07, 2026 at 19:58:19 IST  (total: 00:00:07)

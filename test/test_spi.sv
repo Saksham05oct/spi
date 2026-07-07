@@ -253,20 +253,20 @@ class mon extends uvm_monitor;
             else if (vif.wr !== 1'bx) begin // use robust check to avoid X state mismatch
                 if (vif.wr == 1'b1) begin
                     @(posedge vif.done);
+                    tr.err  = vif.err; // Sample while it is high!
                     @(negedge vif.done);
                     tr.op   = writed;
                     tr.din  = vif.din;
                     tr.addr = vif.addr;
-                    tr.err  = vif.err;
                     `uvm_info("MON", $sformatf("DATA WRITE addr:%0d data:%0d err:%0d", tr.addr, tr.din, tr.err), UVM_NONE); 
                     send.write(tr);
                 end
                 else if (vif.wr == 1'b0) begin
                     @(posedge vif.done);
+                    tr.err  = vif.err; // Sample while it is high!
                     @(negedge vif.done);
                     tr.op   = readd; 
                     tr.addr = vif.addr;
-                    tr.err  = vif.err;
                     tr.dout = vif.dout; 
                     `uvm_info("MON", $sformatf("DATA READ addr:%0d data:%0d slverr:%0d", tr.addr, tr.dout, tr.err), UVM_NONE); 
                     send.write(tr);
