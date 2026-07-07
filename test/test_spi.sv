@@ -1,8 +1,6 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
-
-////////////////////////////////////////////////////////////////////////////////////
-class spi_config extends uvm_object; /////configuration of env
+class spi_config extends uvm_object; // configuration of env
     `uvm_object_utils(spi_config)
     
     function new(string name = "spi_config");
@@ -12,7 +10,6 @@ class spi_config extends uvm_object; /////configuration of env
     uvm_active_passive_enum is_active = UVM_ACTIVE;
 endclass
 
-//////////////////////////////////////////////////////////
 
 typedef enum bit [2:0] {readd = 0, writed = 1, rstdut = 2, writeerr = 3, readerr = 4} oper_mode;
 
@@ -45,9 +42,7 @@ class transaction extends uvm_sequence_item;
     endfunction
 endclass : transaction
 
-///////////////////////////////////////////////////////////////////////
-
-///////////////////write seq
+// write seq
 class write_data extends uvm_sequence#(transaction);
     `uvm_object_utils(write_data)
     
@@ -69,7 +64,6 @@ class write_data extends uvm_sequence#(transaction);
         end
     endtask
 endclass
-//////////////////////////////////////////////////////////
 
 class write_err extends uvm_sequence#(transaction);
     `uvm_object_utils(write_err)
@@ -93,8 +87,6 @@ class write_err extends uvm_sequence#(transaction);
     endtask
 endclass
 
-///////////////////////////////////////////////////////////////
-
 class read_data extends uvm_sequence#(transaction);
     `uvm_object_utils(read_data)
     
@@ -116,7 +108,6 @@ class read_data extends uvm_sequence#(transaction);
         end
     endtask
 endclass
-/////////////////////////////////////////////////////////////////////
 
 class read_err extends uvm_sequence#(transaction);
     `uvm_object_utils(read_err)
@@ -139,7 +130,6 @@ class read_err extends uvm_sequence#(transaction);
         end
     endtask
 endclass
-/////////////////////////////////////////////////////////////////
 
 class reset_dut extends uvm_sequence#(transaction);
     `uvm_object_utils(reset_dut)
@@ -162,41 +152,7 @@ class reset_dut extends uvm_sequence#(transaction);
         end
     endtask
 endclass
-////////////////////////////////////////////////////////////
 
-class writeb_readb extends uvm_sequence#(transaction);
-    `uvm_object_utils(writeb_readb)
-    
-    transaction tr;
-    
-    function new(string name = "writeb_readb");
-        super.new(name);
-    endfunction
-    
-    virtual task body();
-        repeat(10) begin
-            tr = transaction::type_id::create("tr");
-            tr.addr_c.constraint_mode(1);
-            tr.addr_c_err.constraint_mode(0);
-            start_item(tr);
-            if (!tr.randomize()) `uvm_error("SEQ", "Randomization failed")
-            tr.op = writed;
-            finish_item(tr);  
-        end
-        
-        repeat(10) begin
-            tr = transaction::type_id::create("tr");
-            tr.addr_c.constraint_mode(1);
-            tr.addr_c_err.constraint_mode(0);
-            start_item(tr);
-            if (!tr.randomize()) `uvm_error("SEQ", "Randomization failed")
-            tr.op = readd;
-            finish_item(tr);
-        end   
-    endtask
-endclass
-
-////////////////////////////////////////////////////////////
 class driver extends uvm_driver #(transaction);
     `uvm_component_utils(driver)
     
@@ -216,7 +172,7 @@ class driver extends uvm_driver #(transaction);
     
     task reset_dut();
         repeat(5) begin
-            vif.rst  <= 1'b1;  ///active high reset
+            vif.rst  <= 1'b1;  // active high reset
             vif.addr <= 'h0;
             vif.din  <= 'h0;
             vif.wr   <= 1'b0; 
@@ -265,8 +221,6 @@ class driver extends uvm_driver #(transaction);
         drive();
     endtask
 endclass
-
-//////////////////////////////////////////////////////////////////////////////////////////////
 
 class mon extends uvm_monitor;
     `uvm_component_utils(mon)
@@ -321,7 +275,6 @@ class mon extends uvm_monitor;
         end
     endtask 
 endclass
-//////////////////////////////////////////////////////////////////////////////////////////////////
 
 class sco extends uvm_scoreboard;
     `uvm_component_utils(sco)
@@ -368,8 +321,6 @@ class sco extends uvm_scoreboard;
     endfunction
 endclass
 
-//////////////////////////////////////////////////////////////////////////////////////////////
-
 class agent extends uvm_agent;
     `uvm_component_utils(agent)
     
@@ -401,8 +352,6 @@ class agent extends uvm_agent;
     endfunction
 endclass
 
-//////////////////////////////////////////////////////////////////////////////////
-
 class env extends uvm_env;
     `uvm_component_utils(env)
     
@@ -425,8 +374,6 @@ class env extends uvm_env;
     endfunction
 endclass
 
-//////////////////////////////////////////////////////////////////////////
-
 class test extends uvm_test;
     `uvm_component_utils(test)
     
@@ -435,7 +382,6 @@ class test extends uvm_test;
     write_err werr;
     read_data rdata;
     read_err rerr;
-    writeb_readb wrrdb;
     reset_dut rstdut;  
     
     function new(input string inst = "test", uvm_component c);
@@ -448,20 +394,33 @@ class test extends uvm_test;
         wdata  = write_data::type_id::create("wdata");
         werr   = write_err::type_id::create("werr");
         rdata  = read_data::type_id::create("rdata");
-        wrrdb  = writeb_readb::type_id::create("wrrdb");
         rerr   = read_err::type_id::create("rerr");
         rstdut = reset_dut::type_id::create("rstdut");
     endfunction
     
     virtual task run_phase(uvm_phase phase);
         phase.raise_objection(this);
-        wrrdb.start(e.a.seqr);
+        
+        `uvm_info("TEST", "--- STARTING RESET SEQUENCE ---", UVM_NONE)
+        rstdut.start(e.a.seqr);
+        
+        `uvm_info("TEST", "--- STARTING WRITE DATA SEQUENCE ---", UVM_NONE)
+        wdata.start(e.a.seqr);
+        
+        `uvm_info("TEST", "--- STARTING READ DATA SEQUENCE ---", UVM_NONE)
+        rdata.start(e.a.seqr);
+        
+        `uvm_info("TEST", "--- STARTING WRITE ERROR SEQUENCE ---", UVM_NONE)
+        werr.start(e.a.seqr);
+        
+        `uvm_info("TEST", "--- STARTING READ ERROR SEQUENCE ---", UVM_NONE)
+        rerr.start(e.a.seqr);
+
+        
         #100ns; // Wait a bit before dropping objection
         phase.drop_objection(this);
     endtask
 endclass
-
-//////////////////////////////////////////////////////////////////////
 
 module tb;
     spi_i vif();
