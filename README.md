@@ -42,4 +42,32 @@ The Serial Peripheral Interface (SPI) is a synchronous serial communication prot
 
 ## SPI Top-Level Design
 
-![SPI Top-Level Design](spi_top_design.png)
+```mermaid
+graph LR
+    subgraph top ["top (Top Level module)"]
+        direction LR
+        
+        %% Components
+        intf["spi_intf<br>(Master Controller)"]
+        mem["spi_mem<br>(Slave Memory)"]
+        
+        %% External Inputs
+        inputs[/"Inputs: clk, rst, wr, addr[7:0], din[7:0]"/] --> intf
+        
+        %% Shared Clocks/Resets
+        clk_rst[/"clk, rst"/] -.-> mem
+        
+        %% Internal SPI Bus Connections
+        intf -- "csreg (CS)" --> mem
+        intf -- "mosireg (MOSI)" --> mem
+        mem -- "misoreg (MISO)" --> intf
+        mem -- "readyreg (READY)" --> intf
+        mem -- "opdonereg (DONE)" --> intf
+        
+        %% External Outputs
+        intf --> outputs[/"Outputs: dout[7:0], done, err"/]
+    end
+    
+    classDef module fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    class intf,mem module;
+```
