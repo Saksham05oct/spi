@@ -11,7 +11,7 @@ class spi_config extends uvm_object; // configuration of env
 endclass
 
 
-typedef enum bit [2:0] {readd = 0, writed = 1, rstdut = 2, writeerr = 3, readerr = 4} oper_mode;
+typedef enum bit [2:0] {readd = 0, writed = 1, rstdut = 2} oper_mode;
 
 class transaction extends uvm_sequence_item;
     rand oper_mode op;
@@ -34,7 +34,7 @@ class transaction extends uvm_sequence_item;
         `uvm_field_enum(oper_mode, op, UVM_DEFAULT)
     `uvm_object_utils_end
     
-    constraint addr_c { addr <= 10; }
+    constraint addr_c { addr <= 31; }
     constraint addr_c_err { addr > 31; }
     
     function new(string name = "transaction");
